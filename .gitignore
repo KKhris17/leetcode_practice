@@ -1,0 +1,38 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+
+# C build files
+*.o
+*.out
+*.a
+*.so
+*.exe
+
+# Common build folders
+build/
+dist/
+bin/
+
+# Editor
+.vscode/
+.idea/
+
+# Cmake
+CMakeFiles/
+CMakeCache.txt
+cmake-build-*/
+Makefile
+compile_commands.json
