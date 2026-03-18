@@ -1,8 +1,8 @@
 /**
  * Note: The returned array must be malloced, assume caller calls free().
  */
-#include <stddef.h>
-#include <stdlib.h>
+#include <stddef.h> // for size_t, NULL
+#include <stdlib.h> // for malloc exit atoi
 
 int*	getConcatenation(int* nums, int numsSize, int* returnSize) {
 	int	*output;
