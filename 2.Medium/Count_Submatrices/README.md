@@ -10,6 +10,10 @@
 - Time Complexity : 
 - Space Complexity : 
 
+## Record
+- Runtime 23ms
+- Memory 59.3 MB
+
 ## Example
 - input [1,2,3]
 - output [1,2,3,1,2,3]
