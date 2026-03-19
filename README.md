@@ -4,6 +4,7 @@ A collection of my leetCode solutions in C, with clear explanations, optimized a
 ## AI Approach
 Some practice involved using AI for:
 - understanding the subject and technical terms
+- preliminary research
 - langauge translation
 - identifying the root cause of bugs
 - guidance and hints only, **without** directly generating code

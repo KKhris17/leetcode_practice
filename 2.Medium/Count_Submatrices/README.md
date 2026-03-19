@@ -11,16 +11,17 @@
 - Space Complexity : 
 
 ## Record
-- Runtime 23ms
-- Memory 59.3 MB
+- Runtime 23 ms, Beats 28.57% (18/03/26)
+- Memory 59.33 MB, Beats 00.00% (18/03/26)
 
 ## Example
-- input [1,2,3]
-- output [1,2,3,1,2,3]
+- input 
+- output 
 
 ## AI Usage
 AI assistance was used in this practice for:
 - understanding concepts and technical terms
+- preliminary research
 - langauge translation
 - identifying possible root cause of bugs
 
