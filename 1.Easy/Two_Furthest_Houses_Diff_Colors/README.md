@@ -24,10 +24,10 @@ Use 2 independent passes (loop) instead, since the maximum distance must have at
 - Space Complexity : O(1)
 
 ## Record
-- c_version
+- c_version (20/04/26)
 	- Runtime 0ms
 	- Memory 8.89 MB (Beats 31.94%)
-- py_version
+- py_version (21/04/26)
 	- Runtime 0ms
 	- Memory 19.37 MB (Beats 25.06%)
 
