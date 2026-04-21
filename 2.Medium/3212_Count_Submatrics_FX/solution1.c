@@ -43,9 +43,9 @@ int numberOfSubmatrices(char** grid, int gridSize, int* gridColSize)
 	int			temp;//temporary variable
 	int			output = 0;
 
-	prefix = malloc(gridSize * sizeof(t_intWstat *));
+	prefix = malloc(gridSize * sizeof(t_intWstat *));//to store sum value and status
 	if (!prefix)
-		return (-1);//NULL is for pointer
+		return (-1);
 	while (i < gridSize)
 	{
 		prefix[i] = malloc(*(gridColSize) * sizeof(t_intWstat));
@@ -63,11 +63,11 @@ int numberOfSubmatrices(char** grid, int gridSize, int* gridColSize)
 		i++;
 	}
 	i = 0;
-	intgrid = malloc(gridSize * sizeof(int *));
+	intgrid = malloc(gridSize * sizeof(int *));//to store converted value
 	if (!intgrid)
 	{
 		free (prefix);
-		return (-1);//NULL is for pointer
+		return (-1);
 	}
 	while (i < gridSize)
 	{
@@ -94,10 +94,10 @@ int numberOfSubmatrices(char** grid, int gridSize, int* gridColSize)
 	}
 	i = 0;
 
-	while (i < gridSize)
+	while (i < gridSize) // convert value
 	{
 		j = 0;
-		while (j < *(gridColSize))
+		while (j < *(gridColSize)) 
 		{
 			if (grid[i][j] == 'X')
 				intgrid[i][j] = 1;
@@ -109,14 +109,14 @@ int numberOfSubmatrices(char** grid, int gridSize, int* gridColSize)
 		}
 		i++;
 	}
-	prefix[0][0].value = intgrid[0][0];
+	prefix[0][0].value = intgrid[0][0]; //1st prefix
 	if (grid[0][0] == 'X')
 		prefix[0][0].status = 1;
 	else
 		prefix[0][0].status = 0;
 	j = 1;
 	temp = intgrid[0][0];
-	while (j < *(gridColSize))
+	while (j < *(gridColSize)) //1st col prefix
 	{
 		prefix[0][j].value = temp + intgrid[0][j];
 		temp = temp + intgrid[0][j];
@@ -132,7 +132,7 @@ int numberOfSubmatrices(char** grid, int gridSize, int* gridColSize)
 	}
 	i = 1;
 	temp = intgrid[0][0];
-	while (i < gridSize)
+	while (i < gridSize) //1st row prefix
 	{
 		prefix[i][0].value = temp + intgrid[i][0];
 		temp = temp + intgrid[i][0];
@@ -147,7 +147,7 @@ int numberOfSubmatrices(char** grid, int gridSize, int* gridColSize)
 		i++;
 	}
 	i = 1;
-	while (i < gridSize)
+	while (i < gridSize)//2D prefix sum method
 	{
 		j = 1;
 		while (j < *(gridColSize))
